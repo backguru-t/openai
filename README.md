@@ -18,4 +18,7 @@ can see the (venv) prompt in your command window. Install the requirments for al
 pip install -r requirements.txt
 ```
 
+## Trouble shootings
+* ERROR: Could not build wheels for multidict: install the latest Microsoft Visual C++ build tools 
+
 Wishing you good luck.
