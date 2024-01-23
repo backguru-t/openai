@@ -106,12 +106,16 @@ celerybeat.pid
 .venv
 env/
 venv/
+venv3.11/
 ENV/
 env.bak/
 venv.bak/
 pyvenv.cfg
 share/
 bin/
+nltk_data/
+natural-lang-process/ted_en-20160408.xml
+
 
 # Spyder project settings
 .spyderproject
