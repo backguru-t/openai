@@ -23,7 +23,7 @@ Azure OpenAI Service는 GPT-4, GPT-4 Turbo with Vision, GPT-3.5-Turbo 및 Embedd
 Azure OpenAI 서비스는 다양한 기능과 가격대를 갖춘 다양한 모델 집합으로 구동됩니다. 모델 가용성은 지역에 따라 다르며 좀 더 구체적인 내용은 [Azure OpenAI 서비스 모델](https://learn.microsoft.com/ko-kr/azure/ai-services/openai/concepts/models)을 참조한다.
 
 ## Azure 구독 및 OpenAI 엑세스 권한 신청
-Azure OpenAI를 사용하기 위해서는 Azure 구독이 필요하다. 구독이 없는 경우에는 [여기](https://azure.microsoft.com/ko-kr/free/ai-services/)를 참고한다. Azure OpenAI 리소스를 만들기 위해서는 이 서비스에 대한 엑세스 권한을 신청해야 한다. [여기](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUNTZBNzRKNlVQSFhZMU9aV09EVzYxWFdORCQlQCN0PWcu)서 양식에 맞게 답변을 제출하여 Azure OpenAI에 대한 엑세스를 신청할 수 있다.
+Azure OpenAI를 사용하기 위해서는 Azure 구독이 필요하다. 구독이 없는 경우에는 [여기](https://azure.microsoft.com/ko-kr/free/ai-services/)를 참고한다. Azure OpenAI 리소스를 만들기 위해서는 이 서비스에 대한 엑세스 권한을 신청해야 한다. [여기](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUNTZBNzRKNlVQSFhZMU9aV09EVzYxWFdORCQlQCN0PWcu)서 양식에 맞게 답변을 제출하여 Azure OpenAI에 대한 엑세스를 신청할 수 있다. 승인이 완료 된 후 Azure portal에 로그인하고 Azure OpenAI 서비스 리소슬르 만들고 스튜디오를 통해 모델 실험을 진행할 수 있다.
 
 ## Azure OpenAI 리소스 만들기
 Azure Portal에서 구독된 로그인 계정으로 접속한 후 [리소스 만들기](https://learn.microsoft.com/ko-kr/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource)를 참고하여 Azure 리소스를 생성할 수 있다.
