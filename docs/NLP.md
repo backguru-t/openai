@@ -16,6 +16,8 @@
 - [밀집 표현](#밀집-표현)
 - [워드투벡터](#word2vector)
 
+Sample codes: https://gitlab.twolinecode.com/tony.cho/openai/-/tree/master/examples/nlp
+
 ## 자연어 처리를 위한 패키지 설치
 자연어 (NL)란 우리가 일상 생활에서 사용하는 언어를 의미하며, 자연어 처리 (NLP)란 이런 자연어의 의미를 분석하여 컴퓨터가 처리할 수 있도록 하는 일을 의미하며, 챗봇, 감성 분석 및 뉴스 기사 분류 등과 같은 분야에서 이용 되고 있다.
 
