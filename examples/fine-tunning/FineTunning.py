@@ -73,6 +73,7 @@ validation_file_name = "examples/data/tmp_recipe_finetune_validation.jsonl"
 write_jsonl(validation_data, validation_file_name)
 
 # upload files
+training_file_name = "examples/data/training_data_twolinecode.jsonl"
 with open(training_file_name, "rb") as training_fd:
     training_response = openai.files.create(
         file=training_fd, purpose="fine-tune"
@@ -80,19 +81,19 @@ with open(training_file_name, "rb") as training_fd:
 
 training_file_id = training_response.id
 
-with open(validation_file_name, "rb") as validation_fd:
-    validation_response = openai.files.create(
-        file=validation_fd, purpose="fine-tune"
-    )
-validation_file_id = validation_response.id
+# with open(validation_file_name, "rb") as validation_fd:
+#     validation_response = openai.files.create(
+#         file=validation_fd, purpose="fine-tune"
+#     )
+# validation_file_id = validation_response.id
 
 print("Training file ID:", training_file_id)
-print("Validation file ID:", validation_file_id)
+# print("Validation file ID:", validation_file_id)
 
 # Fine tuning
 response = openai.fine_tuning.jobs.create(
     training_file=training_file_id,
-    validation_file=validation_file_id,
+    # validation_file=validation_file_id,
     model="gpt-3.5-turbo",
     suffix="tlc-ft",
 )

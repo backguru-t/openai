@@ -32,7 +32,7 @@ from langchain_core.output_parsers import StrOutputParser
 output_parser = StrOutputParser()
 chain = prompt | llm | output_parser
 
-loader = WebBaseLoader("https://n.news.naver.com/mnews/article/079/0003855673?sid=102")
+loader = WebBaseLoader("https://n.news.naver.com/mnews/article/119/0002793100?sid=100")
 
 docs = loader.load()
 print(docs)
@@ -62,5 +62,5 @@ from langchain.chains import create_retrieval_chain
 retriever = vector.as_retriever()
 retrieval_chain = create_retrieval_chain(retriever, document_chain)
 
-response = retrieval_chain.invoke({"input": "이재명이 분노한 이유는?"})
+response = retrieval_chain.invoke({"input": "본문의 내용을 5~7문장으로 제목, 서론, 본론, 결론으로 나누어 요약해줘"})
 print(response["answer"])
