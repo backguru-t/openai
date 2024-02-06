@@ -9,18 +9,15 @@ api_key = os.getenv("API_KEY")
 
 llm = ChatOpenAI(openai_api_key=api_key) # type: ignore
 
-# for chunk in llm.stream("List the U.S. Presidents in chronological order"):
-#     print(chunk.content, end="", flush=True)
-
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", "You are world class journalist."),
+        ("system", "당신은 사회부 기자입니다. 제목, 서론, 본론, 결론으로 기사를 작성하시오"),
         ("user", "{input}")
     ]
 )
 
 chain = prompt | llm
-print(chain.invoke({"input": "explain global climate change"}).content)
-
+for chunk in chain.stream({"input": "지구 온난하 위기에 대해 설명해줘"}):
+    print(chunk.content, end="", flush=True)
 
 
