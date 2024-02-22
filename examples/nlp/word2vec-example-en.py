@@ -15,7 +15,7 @@ urllib.request.urlretrieve(
     "https://raw.githubusercontent.com/ukairia777/tensorflow-nlp-tutorial/main/09.%20Word%20Embedding/dataset/ted_en-20160408.xml", 
     filename="data/w2v/ted_en-20160408.xml")
 
-targetXML = open('natural-lang-process/ted_en-20160408.xml', 'r', encoding='UTF8')
+targetXML = open('data/w2v/ted_en-20160408.xml', 'r', encoding='UTF8')
 target_text = etree.parse(targetXML)
 
 # xml 파일로부터 <content>와 </content> 사이의 내용만 가져온다.
@@ -43,14 +43,23 @@ print('총 샘플의 개수 : {}'.format(len(result)))
 for line in result[:3]:
     print(line)
 
+print("="*50)
+
+# vector_size = 워드 벡터의 특징 값. 즉, 임베딩 된 벡터의 차원.
+# window = 컨텍스트 윈도우 크기
+# min_count = 단어 최소 빈도 수 제한 (빈도가 적은 단어들은 학습하지 않는다.)
+# workers = 학습을 위한 프로세스 수
+# sg = 0은 CBOW, 1은 Skip-gram
+
 model = Word2Vec(sentences=result, vector_size=100, window=5, min_count=5, workers=4, sg=0)
 model_result = model.wv.most_similar("man")
 print(model_result)
+print("="*50)
 
 # save w2v model
 model.wv.save_word2vec_format("data/w2v/eng_w2v")
 # load w2v model
-loaded_model = KeyedVectors.load_word2vec_format("eng_w2v")
+loaded_model = KeyedVectors.load_word2vec_format("data/w2v/eng_w2v")
 
-model_result = loaded_model.most_similar("man")
+model_result = loaded_model.most_similar("company")
 print(model_result)

@@ -32,7 +32,8 @@ from langchain_core.output_parsers import StrOutputParser
 output_parser = StrOutputParser()
 chain = prompt | llm | output_parser
 
-loader = WebBaseLoader("https://n.news.naver.com/mnews/article/119/0002793100?sid=100")
+test_news_url = "https://n.news.naver.com/mnews/article/092/0002321211"
+loader = WebBaseLoader(test_news_url)
 
 docs = loader.load()
 print(docs)
